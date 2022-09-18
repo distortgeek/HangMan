@@ -54,8 +54,8 @@ hp = ['''
 =========''']
 
 
-
-st1 = ""
+lst1 = []
+st1 = st2 = v = ""
 hp1 = 0
 word = random.choice(words)
 print(word)
@@ -83,32 +83,41 @@ if c1 == 1 :
   print("Welcome the brave one.")
   print("Let's Start the Game!")
   print("=====================")
+  for z in st1:
+        lst1.append(z)
   while True:
-    print(st1)
-    if st1 == word1:
-      print("========================================")
-      print("Indeed you are a Brave One. Well Played!")
-      print("========================================")
-      break
     print(hp[hp1])
     print("=============================")
-    print("Take the guess the brave one.")
+    print("Take the guess brave one.")
     print("=============================")
     e = 0
-    g1 = input()
+    g1 = input("Enter One Alphabet Only. : ")
+    print("=============================")
     if len(g1) == 1:
       for i in word:
+        st2 = ""
         d = 0
-        e = e+1
         if g1 == i:
           a = i
-          st1 = st1.replace("_",a,1) # PROBLEM
+          lst1[e] = a
+          for q in lst1:
+            st2 = st2 + q
+          print(st2)
           print("================================================")
           print("Congratulations! Brave one your guess was right.")
           print("================================================")
+          e = e+2
           break
         else:
+          e = e+2
           d = d+1
+      if len(st2) < len(word1):
+        st2 = st2 + " "
+        if st2 == word1:
+          print("========================================")
+          print("Indeed you are a Brave One. Well Played!")
+          print("========================================")
+          quit()
       if d > 0:
           print("====================")
           print("Issh! Wrong guess...")
@@ -120,14 +129,14 @@ if c1 == 1 :
             print("=========================")
             print(hp[hp1])
             f= f + 1
-
-
     else:
       print("====================================================================")
       print("Trying to be oversmart with me? Enter only one alphabat at one time.")
       print("====================================================================")
     if f > 0:
       break
+
+
 
 
 elif c1 == 2 :
