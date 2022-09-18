@@ -111,13 +111,11 @@ if c1 == 1 :
         else:
           e = e+2
           d = d+1
-      if len(st2) < len(word1):
-        st2 = st2 + " "
-        if st2 == word1:
-          print("========================================")
-          print("Indeed you are a Brave One. Well Played!")
-          print("========================================")
-          quit()
+      if st2 == word1:
+        print("========================================")
+        print("Indeed you are a Brave One. Well Played!")
+        print("========================================")
+        quit()
       if d > 0:
           print("====================")
           print("Issh! Wrong guess...")
