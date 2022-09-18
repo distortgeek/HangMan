@@ -62,8 +62,15 @@ print(word)
 
 i = len(word)
 
+word1 = ""
+
 t1 = "_" + " "
 st1 = t1*i
+f = 0
+
+for i in word:
+  j = i + " "
+  word1 = word1 + j
 
 print("HangMan?")
 print("Choice 1 : Play the Game.")
@@ -75,27 +82,52 @@ c1 = int(input("Would you like to play the game?: "))
 if c1 == 1 :
   print("Welcome the brave one.")
   print("Let's Start the Game!")
+  print("=====================")
   while True:
     print(st1)
+    if st1 == word1:
+      print("========================================")
+      print("Indeed you are a Brave One. Well Played!")
+      print("========================================")
+      break
     print(hp[hp1])
+    print("=============================")
     print("Take the guess the brave one.")
+    print("=============================")
+    e = 0
     g1 = input()
     if len(g1) == 1:
       for i in word:
         d = 0
+        e = e+1
         if g1 == i:
           a = i
-          st1 = st1.replace("_",a) # PROBLEM
+          st1 = st1.replace("_",a,1) # PROBLEM
+          print("================================================")
           print("Congratulations! Brave one your guess was right.")
+          print("================================================")
           break
         else:
           d = d+1
       if d > 0:
+          print("====================")
           print("Issh! Wrong guess...")
+          print("====================")
           hp1 = hp1 + 1
+          if hp1 == 6:
+            print("=========================")
+            print("Aww!! You lost.Try again.")
+            print("=========================")
+            print(hp[hp1])
+            f= f + 1
+
 
     else:
+      print("====================================================================")
       print("Trying to be oversmart with me? Enter only one alphabat at one time.")
+      print("====================================================================")
+    if f > 0:
+      break
 
 
 elif c1 == 2 :
