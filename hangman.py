@@ -104,6 +104,8 @@ if c1 == 1 :
   while True:
     print(hp[hpi])
     print("=============================")
+    print(word2)
+    print("=============================")
     print("Take the guess brave one.")
     print("=============================")
     print("=============================")
@@ -119,7 +121,7 @@ if c1 == 1 :
               lst1[k] = input1
               for q in lst1:
                 st1 = st1 + q
-          print(st1)
+          word2 = st1
           print("================================================")
           print("Congratulations! Brave one your guess was right.")
           print("================================================")
@@ -132,6 +134,7 @@ if c1 == 1 :
       print("====================================================================")
     if st1 == word1:
             print(hp[7])
+            print(word2)
             print("========================================")
             print("Indeed you are a Brave One. Well Played!")
             print("========================================")
