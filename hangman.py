@@ -65,7 +65,6 @@ word1 = word2 = j = st1 = ""
 
 hpi = f = 0
 word = random.choice(words)
-print(word)
 
 for i in word:
   i = i + " "
