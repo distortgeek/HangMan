@@ -109,7 +109,7 @@ if c1 == 1 :
     print("Take the guess brave one.")
     print("=============================")
     print("=============================")
-    input1 = input("Enter One Alphabet Only. : ")
+    input1 = input("Enter One Alphabet Only. : ").lower()
     print("=============================")
     if len(input1) == 1:
       for i in lst2:
