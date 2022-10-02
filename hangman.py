@@ -149,6 +149,7 @@ if c1 == 1 :
           print("Aww!! You lost.Try again.")
           print("=========================")
           print(hp[hpi])
+          print("Word was : ",word1)
           f= f + 1
     if f > 0:
       break
