@@ -32,7 +32,7 @@ This project is a classic Hangman game implemented in Python. It's a simple yet 
     - Try to guess the word before running out of attempts.
 
 ## Screenshots
-(Optional: If you have any screenshots of the game, you can include them here)
+
 
 ## Contributors
 - [Aman](https://github.com/distortgeek)
